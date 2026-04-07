@@ -1,0 +1,21 @@
+{
+  "name": "cypress-turma-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --spec 'cypress/e2e/conta-pf/FormularioAberturaContaPF.cy.js'",
+    "test:headless": "npx cypress run",
+    "test:open": "npx cypress open",
+    "test:report": "npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^15.13.0"
+  },
+  "dependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+}

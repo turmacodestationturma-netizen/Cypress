@@ -1,0 +1,23 @@
+{
+  "contaValida": {
+    "nome": "Samuel Xavier Rodrigues",
+    "telefone": "11958639439",
+    "email": "teste@teste.com.br",
+    "cpf": "711.867.710-89",
+    "dataNascimento": "21021990"
+  },
+  "cpfInvalido": {
+    "nome": "Samuel Xavier Rodrigues",
+    "telefone": "11958639439",
+    "email": "teste@teste.com.br",
+    "cpf": "000.000.000-00",
+    "dataNascimento": "21021990"
+  },
+  "emailInvalido": {
+    "nome": "Samuel Xavier Rodrigues",
+    "telefone": "11958639439",
+    "email": "email-invalido",
+    "cpf": "711.867.710-89",
+    "dataNascimento": "21021990"
+  }
+}
