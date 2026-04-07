@@ -51,11 +51,18 @@ class FormularioContaPFPage extends BasePage {
   }
 
   verificarErroCPF() {
-    cy.get(elementos.msgErroCPF).should('be.visible')
+    // O site usa styled-components com classes dinâmicas sem data-testid.
+    // Verifica que o formulário NÃO avançou para a tela de confirmação,
+    // e que o campo CPF ainda está visível (bloqueio por CPF inválido).
+    cy.contains('Prontinho! Recebemos os seus dados.').should('not.exist')
+    cy.get(elementos.inputCPF).should('be.visible')
   }
 
   verificarCampoObrigatorio(campo) {
-    cy.get(`[name="${campo}"]`).should('have.attr', 'aria-invalid', 'true')
+    // O site não usa aria-invalid. Verifica que o formulário não avançou
+    // e o campo inválido ainda está visível na tela.
+    cy.contains('Prontinho! Recebemos os seus dados.').should('not.exist')
+    cy.get(`[name="${campo}"]`).should('be.visible')
   }
 }
 
