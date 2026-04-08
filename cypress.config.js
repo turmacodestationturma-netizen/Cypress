@@ -8,7 +8,7 @@ module.exports = defineConfig({
     viewportHeight: 720,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 30000,
-    video: false,
+    video: true,
     screenshotOnRunFailure: true,
 
     setupNodeEvents(on, config) {
